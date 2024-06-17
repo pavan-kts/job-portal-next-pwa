@@ -11,6 +11,7 @@ const About: React.FC = () => {
         <p className="text-lg mb-4 text-center dark:text-gray-400">
           We are dedicated to helping you find the best job opportunities available.
         </p>
+        
 
         {/* First Section */}
         <div className="bg-white p-6 rounded shadow-md mb-8 dark:bg-gray-700 flex flex-col md:flex-row items-center">
