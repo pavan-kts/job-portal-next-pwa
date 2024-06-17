@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
     <nav className="bg-gray-800 p-4 dark:bg-gray-900">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-2xl font-bold dark:text-gray-200">Job Portal</div>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-8">
           <Link href="/" className="text-white hover:underline dark:text-gray-200">Home</Link>
           <Link href="/about-us" className="text-white hover:underline dark:text-gray-200">About Us</Link>
           <Link href="/contact-us" className="text-white hover:underline dark:text-gray-200">Contact Us</Link>
