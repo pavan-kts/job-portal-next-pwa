@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
         <p className="text-lg mb-4 dark:text-gray-400">
           You are logged in successfully. Here you can manage your profile and settings.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 mb-6">
           {/* Add your dashboard content here */}
           <p className="text-sm mb-2">Dashboard Content Goes Here</p>
           <ul className="list-disc list-inside">
