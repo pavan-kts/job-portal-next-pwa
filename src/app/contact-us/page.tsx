@@ -24,14 +24,14 @@ const Contact: React.FC = () => {
               <p className="mb-4 dark:text-gray-400">
                 123 Job Street, Employment City, JOB 12345
               </p>
-              <div className="flex">
-                <div>
+              <div className="flex flex-col sm:flex-row ">
+                <div className="sm:mr-16">
                   <p className="dark:text-gray-400">
                     <strong>Phone:</strong>
                   </p>
                   <p className="mb-4 dark:text-gray-400">+91 9876543210</p>
                 </div>
-                <div className="ml-16">
+                <div>
                   <p className="dark:text-gray-400">
                     <strong>Email:</strong>
                   </p>
@@ -42,8 +42,7 @@ const Contact: React.FC = () => {
               </div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.272383472671!2d73.78110577432076!3d18.561754767916657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf589780c4c3%3A0x217fe83432efd790!2s74%20DOWN%20TOWN%20By%20AURA%20Realtors!5e0!3m2!1sen!2sin!4v1718604924487!5m2!1sen!2sin"
-                width="550"
-                height="280"
+                className="w-full h-64 md:w-550 md:h-280"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"

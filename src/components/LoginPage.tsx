@@ -1,7 +1,6 @@
-"use client";
-import React, { useState } from "react";
-import { useRouter } from 'next/navigation'
-import Link from "next/link";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface FormData {
   email: string;
@@ -10,11 +9,10 @@ interface FormData {
 
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
-  const router = useRouter()
-
+  const router = useRouter();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -26,8 +24,8 @@ const LoginPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Email : " + formData.email);
-    console.log("Password : " + formData.password);
+    console.log('Email : ' + formData.email);
+    console.log('Password : ' + formData.password);
     router.push('/dashboard');
   };
 
@@ -62,7 +60,7 @@ const LoginPage: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="py-2 my-2 bg-blue-500 text-white px-5 font-semibold rounded-lg hover:bg-blue-700"
+          className="py-2 my-2 bg-blue-500 text-white px-5 font-semibold rounded-lg hover:bg-blue-700 w-full max-w-sm"
         >
           Login
         </button>

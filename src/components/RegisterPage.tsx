@@ -1,7 +1,6 @@
-"use client";
-import React, { useState } from "react";
-import { useRouter } from 'next/navigation'
-import Link from "next/link";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface FormData {
   firstname: string;
@@ -13,14 +12,14 @@ interface FormData {
 
 const RegisterPage: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    confirmpassword: "",
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+    confirmpassword: '',
   });
-  
-  const router = useRouter()
+
+  const router = useRouter();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -32,14 +31,14 @@ const RegisterPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("firstname : " + formData.firstname);
-    console.log("lastname : " + formData.lastname);
-    console.log("Email : " + formData.email);
-    console.log("Password : " + formData.password);
-    console.log("confirmpassword : " + formData.confirmpassword);
-    console.log(`User registered successfully. thank you ${formData.firstname}`);   
+    console.log('firstname : ' + formData.firstname);
+    console.log('lastname : ' + formData.lastname);
+    console.log('Email : ' + formData.email);
+    console.log('Password : ' + formData.password);
+    console.log('confirmpassword : ' + formData.confirmpassword);
+    console.log(`User registered successfully. thank you ${formData.firstname}`);
     alert(`User registered successfully. thank you ${formData.firstname}`);
-    router.push('/login') 
+    router.push('/login');
   };
 
   return (
@@ -82,7 +81,7 @@ const RegisterPage: React.FC = () => {
             required
           />
         </div>
-        <div className="mb-6 w-full">
+        <div className="mb-4 w-full">
           <input
             type="password"
             name="password"
@@ -97,7 +96,7 @@ const RegisterPage: React.FC = () => {
           <input
             type="password"
             name="confirmpassword"
-            placeholder="Enter your confirm password"
+            placeholder="Confirm your password"
             onChange={handleInputChange}
             value={formData.confirmpassword}
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
@@ -106,7 +105,7 @@ const RegisterPage: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="py-2 bg-blue-500 text-white px-5 font-semibold rounded-lg hover:bg-blue-600 dark:bg-blue-700"
+          className="py-2 bg-blue-500 text-white px-5 font-semibold rounded-lg hover:bg-blue-600 w-full max-w-sm"
         >
           Register
         </button>
@@ -122,7 +121,6 @@ const RegisterPage: React.FC = () => {
         >
           Go to Home Page
         </Link>
-        
       </form>
     </div>
   );
