@@ -1,8 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
+import login from '../app/login/page';
 
 const Dashboard: React.FC = () => {
   // const handleLogout = () => {
-  //   // Handle logout logic here
+    // Handle logout logic here
   //   console.log('Logout clicked');
   // };
 
@@ -22,12 +24,14 @@ const Dashboard: React.FC = () => {
             <li>Feature 3</li>
           </ul>
         </div>
-        <button
-          // onClick={handleLogout} // Event handler attached directly to onClick
+        {/* <button
+          onClick={handleLogout} // Event handler attached directly to onClick
           className="mt-6 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 dark:bg-red-600 dark:hover:bg-red-700"
-        >
+          >
           Logout
-        </button>
+          </button> */}
+          
+        <Link href={"/login"} className="mt-6 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 dark:bg-red-600 dark:hover:bg-red-700">Logout</Link>
       </div>
     </div>
   );
