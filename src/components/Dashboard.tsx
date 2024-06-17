@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Dashboard: React.FC = () => {
-  const handleLogout = () => {
-    // Handle logout logic here
-    console.log('Logout clicked');
-  };
+  // const handleLogout = () => {
+  //   // Handle logout logic here
+  //   console.log('Logout clicked');
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300">
@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
           </ul>
         </div>
         <button
-          onClick={handleLogout} // Event handler attached directly to onClick
+          // onClick={handleLogout} // Event handler attached directly to onClick
           className="mt-6 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 dark:bg-red-600 dark:hover:bg-red-700"
         >
           Logout
