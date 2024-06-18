@@ -53,9 +53,15 @@ const JobDetails: React.FC = () => {
         </ul>
         <button
           onClick={() => router.push('/')}
-          className="mt-6 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
+          className="mt-6 mr-5 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
         >
           Back to Jobs
+        </button>
+        <button
+        //   onClick={() => router.push('/')}
+          className="mt-6 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
+        >
+          Apply
         </button>
       </div>
       <Footer/>

@@ -48,10 +48,10 @@ const UserProfile: React.FC = () => {
             </ul>
           </div>
           <button
-            onClick={() => router.push('/')}
+            // onClick={() => router.push('/')}
             className="mt-6 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
           >
-            Back to Home
+            Edit Profile
           </button>
         </div>
       </div>
