@@ -27,7 +27,7 @@ const LoginPage: React.FC = () => {
     e.preventDefault();
     console.log('Email : ' + formData.email);
     console.log('Password : ' + formData.password);
-    router.push('/dashboard');
+    router.push('/');
   };
 
   return (
@@ -71,12 +71,12 @@ const LoginPage: React.FC = () => {
         >
           Dont have an account? Register here
         </Link>
-        <Link
+        {/* <Link
           href="/"
           className="inline-block my-2 text-center rounded-lg hover:text-blue-600 dark:hover:text-blue-400"
         >
           Go to Home Page
-        </Link>
+        </Link> */}
       </form>
     </div>
   );

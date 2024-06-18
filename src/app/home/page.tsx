@@ -1,7 +1,16 @@
+"use client"
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import { useRouter } from 'next/navigation';
+import Footer from '@/components/Footer';
 
 const Home: React.FC = () => {
+  const router = useRouter();
+
+  const RedirectToJobDetails = () => {
+    router.push("/job-details");
+  }
+
   return (
     <div className="flex flex-col min-h-screen dark:bg-gray-900">
       <Navbar />
@@ -23,17 +32,17 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 dark:text-gray-200">Latest Job Listings</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="job-card bg-white p-4 rounded shadow-md dark:bg-gray-800">
+            <div onClick={RedirectToJobDetails} className="job-card bg-white p-4 rounded shadow-md dark:bg-gray-800 cursor-pointer">
               <h3 className="text-xl font-bold dark:text-gray-200">Software Engineer</h3>
               <p className="text-gray-600 dark:text-gray-400">Tech Company</p>
               <p className="text-gray-600 dark:text-gray-400">San Francisco, CA</p>
             </div>
-            <div className="job-card bg-white p-4 rounded shadow-md dark:bg-gray-800">
+            <div onClick={RedirectToJobDetails} className="job-card bg-white p-4 rounded shadow-md dark:bg-gray-800 cursor-pointer">
               <h3 className="text-xl font-bold dark:text-gray-200">Product Manager</h3>
               <p className="text-gray-600 dark:text-gray-400">Product Co.</p>
               <p className="text-gray-600 dark:text-gray-400">New York, NY</p>
             </div>
-            <div className="job-card bg-white p-4 rounded shadow-md dark:bg-gray-800">
+            <div onClick={RedirectToJobDetails} className="job-card bg-white p-4 rounded shadow-md dark:bg-gray-800 cursor-pointer">
               <h3 className="text-xl font-bold dark:text-gray-200">UX Designer</h3>
               <p className="text-gray-600 dark:text-gray-400">Design Studio</p>
               <p className="text-gray-600 dark:text-gray-400">Remote</p>
@@ -41,11 +50,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-800 py-4 text-center text-white dark:bg-gray-900 dark:text-gray-200">
-        <div className="container mx-auto">
-          &copy; {new Date().getFullYear()} Job Portal. All rights reserved.
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };

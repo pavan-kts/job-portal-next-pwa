@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const About: React.FC = () => {
   return (
@@ -69,11 +70,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-800 py-4 text-center text-white dark:bg-gray-900 dark:text-gray-200">
-        <div className="container mx-auto">
-          &copy; {new Date().getFullYear()} Job Portal. All rights reserved.
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };
