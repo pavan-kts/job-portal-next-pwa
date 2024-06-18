@@ -116,12 +116,12 @@ const RegisterPage: React.FC = () => {
         >
           Already registered? Login here
         </Link>
-        <Link
+        {/* <Link
           href="/"
           className="inline-block my-2 text-center rounded-lg hover:text-blue-600 dark:hover:text-blue-400"
         >
           Go to Home Page
-        </Link>
+        </Link> */}
       </form>
     </div>
   );
